@@ -19,3 +19,22 @@ Répertoire courant : /Users/valentinhoudu/gitRepositories/TP1docker
 6b. docker run --name "TP1" -p 80:80 -d tp1
 
 6c. La première méthode fait que le volume est synchronisé au répertoire sur le PC. Un changelent sur 'lun ou l'autre impacte forcement les deux coters. La seconde méthode permet de ne pas avoir de synchronisation
+
+7a. docker pull phpmyadmin/phpmyadmin
+    docker pull mysql  
+
+7b. docker run --name mysql -e MYSQL_ROOT_PASSWORD=123 -d mysql 
+    docker run --name phpmyadmin -d --mysql:db -p 8081:80 phpmyadmin/phpmyadmin
+    http://localhost:8081
+
+    Connection avec root et mot de passe : 123
+    ```
+    CREATE DATABASE test;
+    use test_creation;
+    CREATE TABLE table_name (
+        column1 INT,
+        column2 INT
+    );
+    ```
+
+8a.
