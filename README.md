@@ -18,7 +18,7 @@ Répertoire courant : /Users/valentinhoudu/gitRepositories/TP1docker
 
 6b. 'docker run --name "TP1" -p 80:80 -d tp1'
 
-6c. La première méthode fait que le volume est synchronisé au répertoire sur le PC. Un changelent sur 'lun ou l'autre impacte forcement les deux coters. La seconde méthode permet de ne pas avoir de synchronisation
+6c. La seconde question fait que l'on renseigne directement l'image et le volume dans dockerfile. La première quetion on ne renseigne que le port et le volume avec docker run. Pareil pour l'image.
 
 7a. 'docker pull phpmyadmin/phpmyadmin'
     'docker pull mysql'
@@ -55,3 +55,16 @@ Répertoire courant : /Users/valentinhoudu/gitRepositories/TP1docker
     
     Dans le fichier docker-compose.yml il est possible de spécifier les volumes, et nottament un fichier initdb.sql qui permet de creer des tables et ajouter des données lors de la constrution du container. 
     L'environnement permet de definir un utilisateur 
+
+9a. /question9/docker-compose.yml
+
+    bash-5.1# ping web
+    ping: web: Name does not resolve
+    bash-5.1# ping app
+    PING app (172.30.0.3) 56(84) bytes of data.
+    64 bytes from app.backend (172.30.0.3): icmp_seq=1 ttl=64 time=0.070 ms
+
+9b.Il y a plusisuers lignes, tout d'abord il   n'y a pas les mêmes réseaux. Impossivle pour les machines de se ping l'une et l'autre.
+Ensuite, l'id network n'est pas indiqu" pour db et web. 
+
+9c. 
