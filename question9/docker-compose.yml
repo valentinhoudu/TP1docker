@@ -1,0 +1,28 @@
+#Question9
+services:
+  web:
+    image: praqma/network-multitool:latest
+    container_name: web
+    networks:
+      - front
+
+  app:
+    image: praqma/network-multitool:latest
+    container_name: app
+    networks:
+      - front
+      - back
+
+  db:
+    image: praqma/network-multitool:latest
+    container_name: db
+    networks:
+      - back
+networks:
+  front:
+    driver: bridge
+    name: front
+
+  back:
+    driver: macvlan
+    name: back
